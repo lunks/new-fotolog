@@ -1,0 +1,6 @@
+form(name='usernameForm')
+  md-input-container
+    label Username
+    input(name='username', ng-model='username', required)
+    div(ng-messages='usernameForm.username.$error')
+      div(ng-message='required') This is required!

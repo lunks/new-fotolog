@@ -109,6 +109,9 @@ module.exports = function makeWebpackConfig (options) {
       // Allow loading html through js
       test: /\.html$/,
       loader: 'raw'
+    }, {
+      test: /\.jade$/,
+      loader: 'jade'
     }]
   };
 
@@ -184,7 +187,7 @@ module.exports = function makeWebpackConfig (options) {
     // Render index.html
     config.plugins.push(
       new HtmlWebpackPlugin({
-        template: './src/index.html',
+        template: './src/index.jade',
         inject: 'body'
       })
     )
